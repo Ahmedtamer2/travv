@@ -1,0 +1,837 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Medium.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Bold.ttf);
+  font-weight: 900;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --nav-bg: #181a27;
+  --light-color: #fff;
+  --warning: #ffc107;
+  --row-color: #23283b;
+  --who-color: #101018;
+  --test-color: #1e2131;
+  --light-filter: invert(100%) sepia(3%) saturate(599%) hue-rotate(120deg)
+    brightness(99%) contrast(97%);
+  --warning-filter: invert(80%) sepia(58%) saturate(2048%) hue-rotate(352deg)
+    brightness(100%) contrast(102%);
+}
+
+/*flex-only*/
+.flex-data {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/*global section*/
+.general-section {
+  width: 100%;
+  padding: 200px 0px;
+  position: relative;
+}
+
+/*tittles*/
+h1 {
+  text-transform: capitalize !important;
+  font-weight: bold !important;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+
+/*first-row*/
+.frist {
+  width: 100%;
+  padding: 7px 0;
+  background: var(--row-color);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 50px;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.frist .box1 {
+  display: flex;
+  padding-top: 10px;
+}
+.frist .box1 .card1 {
+  display: flex;
+  gap: 10px;
+  padding-left: 100px;
+}
+.frist .box1 .card1 img {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  filter: var(--warning-filter);
+  gap: 10px;
+}
+.frist .box1 .card1 p {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.frist .box1 .card2 {
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+}
+.frist .box1 .card2 img {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  filter: var(--warning-filter);
+  gap: 10px;
+}
+.frist .box1 .card2 p {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.frist .box1 .card3 {
+  display: flex;
+  gap: 10px;
+  padding-left: 300px;
+  position: relative;
+  z-index: 9;
+}
+.frist .box1 .card3 img {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  filter: var(--warning-filter);
+  gap: 10px;
+}
+.frist .box1 .card3 p {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.frist .box1 .card3::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -14px;
+  width: 1px;
+  height: 22px;
+  z-index: -1;
+  background-color: var(--light-color);
+}
+.frist .box1 .card4 {
+  display: flex;
+  gap: 10px;
+  padding-left: 20px;
+}
+.frist .box1 .card4 img {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  filter: var(--warning-filter);
+  gap: 10px;
+}
+.frist .box1 .card4 p {
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+/*navbar*/
+.navbar {
+  background-color: var(--nav-bg);
+  top: 0 !important;
+  position: fixed !important;
+  width: 100%;
+  z-index: 9999;
+  transform: translateY(55px);
+}
+
+.navbar-brand img {
+  width: 200px !important;
+  height: 60px !important;
+}
+
+.navbar-nav {
+  margin-left: 7rem !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: var(--light-color) !important;
+  text-transform: uppercase !important;
+}
+
+/*header*/
+header {
+  width: 100%;
+  background: url("../images/header/intro_2.webp") center/cover no-repeat;
+  padding: 240px 0;
+  position: relative;
+  z-index: 8;
+}
+
+header::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(24, 26, 39, 0.8);
+}
+
+header h5 {
+  text-transform: uppercase;
+}
+
+header h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+header a button {
+  padding: 12px 20px;
+  border-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+header .soso button {
+  background-color: transparent;
+  font-weight: normal !important;
+}
+
+header .second {
+  transform: translateY(140px);
+}
+
+header .row .card {
+  color: var(--light-color) !important;
+  background-color: var(--row-color);
+  transition: all 0.3s ease-in-out;
+}
+
+header .row .card:hover {
+  color: var(--nav-bg) !important;
+  background-color: var(--warning) !important;
+}
+
+/*who-we-are*/
+.who-we-are {
+  background-color: var(--who-color);
+}
+
+.who-we-are .row h5 {
+  text-transform: uppercase;
+}
+
+.who-we-are .row h1 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.who-we-are .row .boxes {
+  gap: 30px;
+}
+
+.who-we-are .row .box {
+  gap: 10px;
+}
+
+.who-we-are .row .boxes .img-contain {
+  padding: 9px;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--row-color);
+  height: 57px;
+}
+
+.who-we-are .row .boxes .img-contain img {
+  width: 40px;
+  height: 40px;
+  filter: var(--light-filter);
+}
+
+.who-we-are .row .boxes h3 {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.who-we-are .rows {
+  justify-content: flex-start !important;
+  gap: 30px;
+}
+
+.who-we-are .rows button {
+  border-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 1px;
+}
+
+.who-we-are .row .tele .img-contain img {
+  width: 30px;
+  height: 30px;
+  filter: var(--light-filter);
+}
+
+.who-we-are .row .tele {
+  gap: 15px;
+}
+
+.who-we-are .row form {
+  background-color: var(--row-color);
+}
+
+.who-we-are .row form .name,
+.email,
+.message {
+  flex-direction: column;
+  border-style: none;
+}
+
+.who-we-are .row form .submit button {
+  width: 100%;
+  gap: 5px;
+  border-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 1px;
+  border-style: none;
+}
+
+.who-we-are .row form .submit button img {
+  width: 20px;
+  height: 20px;
+}
+
+/*our-services*/
+.our-services {
+  background-color: var(--row-color);
+  padding: 80px 0;
+}
+
+.our-services .row h1 {
+  font-size: 35px !important;
+}
+
+.our-services .row .img-contain {
+  position: relative;
+}
+
+.our-services .row .img-contain .tittles {
+  position: absolute;
+  background-color: var(--who-color);
+  top: 200px;
+  left: 0;
+  text-transform: capitalize;
+  width: 90%;
+}
+
+.our-services .row .img-contain .tittles p {
+  font-size: 10px;
+}
+
+.our-services .row .img-contain .tittles a button {
+  text-transform: uppercase;
+  background-color: transparent;
+  border-style: none;
+  font-size: 12px;
+}
+
+.our-services .row img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.our-services .row .img-contain .icon {
+  padding: 9px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 65px;
+  position: absolute;
+  top: -20px;
+  right: 0;
+}
+
+.our-services .row .img-contain .icon img {
+  width: 50px;
+  height: 50px;
+}
+
+/*any-emergency*/
+.any-emergency {
+  width: 100%;
+  background: url("../images/emergency/call_us.webp") center/cover no-repeat;
+  position: relative;
+  z-index: 8;
+}
+
+.any-emergency h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.any-emergency::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(92, 93, 100, 0.5);
+}
+
+.any-emergency .row .col-lg-6 {
+  gap: 15px;
+}
+
+.any-emergency .row .box {
+  background-color: rgba(92, 92, 100, 0.8);
+  padding: 25px 45px;
+}
+
+.any-emergency .row .col-6 .box h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.any-emergency .row .col-6 .box p {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+/*why-choose-us*/
+.why-choose-us {
+  width: 100%;
+  background-color: var(--who-color);
+  padding: 150px 0;
+}
+
+.why-choose-us .row .img-contain {
+  position: relative;
+}
+
+.why-choose-us .row .img-contain img {
+  width: 100%;
+  height: 100%;
+}
+
+.why-choose-us .row .img-contain .img-1,
+.img-2 {
+  width: 160px;
+  height: 120px;
+  border: 8px solid var(--who-color);
+}
+
+.why-choose-us .row .img-contain .img-1 {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+}
+
+.why-choose-us .row .img-contain .img-2 {
+  position: absolute;
+  top: 90px;
+  left: -50px;
+}
+
+.why-choose-us .row h1 {
+  font-size: 35px;
+}
+
+.why-choose-us .row .img-contains img {
+  width: 40px;
+  height: 40px;
+  filter: var(--warning-filter);
+}
+
+.why-choose-us .row .img-contains {
+  background-color: var(--row-color);
+  padding: 11px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.why-choose-us .row .box {
+  gap: 30px;
+  text-transform: capitalize;
+}
+
+.why-choose-us .row .box p {
+  font-size: 12px;
+}
+
+/*testimonial*/
+.testimonial {
+  width: 100%;
+  background-color: var(--who-color);
+  padding: 90px 0;
+}
+
+.testimonial h5 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.testimonial h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.testimonial .first {
+  background-color: var(--row-color);
+}
+
+.testimonial .first .row {
+  display: flex;
+  justify-content: space-between !important;
+}
+
+.testimonial .row .box {
+  gap: 20px;
+  text-transform: capitalize;
+}
+
+.testimonial .row .box h5 {
+  font-weight: bold;
+  text-transform: capitalize !important;
+}
+
+.testimonial .row .box .img-contain img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.testimonial .row .box-2 .img-contain img {
+  width: 50px;
+  height: 50px;
+  filter: var(--warning-filter);
+}
+
+.testimonial .second {
+  background-color: var(--test-color);
+  position: relative;
+}
+
+.testimonial .second .img-contain img {
+  width: 100%;
+  height: 400px;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* frequently */
+.frequently {
+  width: 100%;
+  background-color: var(--who-color);
+  padding: 90px 0;
+}
+
+.frequently .row a button {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  border-style: none;
+}
+
+.frequently .row .card {
+  background-color: var(--row-color) !important;
+  margin-bottom: 11px !important;
+}
+
+.frequently .row .card button {
+  color: var(--light-color) !important;
+  text-transform: capitalize !important;
+}
+
+/*use*/
+.use {
+  width: 100%;
+  padding: 90px 0;
+  background: url("../images/Use/intro.webp") center/cover no-repeat;
+  position: relative;
+  z-index: 8;
+}
+
+.use::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(111, 120, 126, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.use .contain {
+  text-align: center;
+  border: 1px dashed var(--light-color);
+  padding: 20px 0;
+}
+
+.use h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 0px 355px;
+}
+
+.use .contain a button {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  border-style: none;
+}
+
+/*contact-us*/
+.contact-us {
+  width: 100%;
+  background-color: var(--who-color);
+  padding: 120px 0;
+}
+
+.contact-us .row .forma h6 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.contact-us .row .forma form button {
+  width: 100%;
+  text-transform: uppercase;
+  border-style: none;
+  border-radius: 2px;
+}
+
+.contact-us .row .forma form .enail .name,
+.email {
+  width: 100%;
+}
+
+.contact-us .row .forma {
+  background-color: var(--row-color);
+}
+
+.contact-us .row h2 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.contact-us .row .box {
+  gap: 30px;
+  justify-content: flex-start !important;
+}
+
+.contact-us .row .box .box-1 img {
+  width: 35px;
+  height: 35px;
+  filter: var(--warning-filter);
+}
+
+.contact-us .row .box .box-1 {
+  justify-content: flex-start !important;
+  margin-left: 0;
+  gap: 12px;
+}
+
+.contact-us .row .box .box-1 h6 {
+  align-items: center !important;
+  text-transform: capitalize;
+}
+
+.contact-us .row .box .box-img {
+  gap: 15px;
+}
+
+.contact-us .row .box .box-img img {
+  width: 40px;
+  height: 40px;
+}
+
+.contact-us iframe {
+  width: 100%;
+  height: 270px;
+}
+
+/* blog */
+.blog {
+  width: 1005;
+  background-color: var(--test-color);
+  padding: 120px 0;
+}
+
+.blog .row .first {
+  background-color: var(--who-color);
+  padding: 80px 60px;
+}
+
+.blog .row .first h5 {
+  text-align: center;
+}
+
+.blog .row .first h1 {
+  font-size: 30px;
+}
+
+.blog .row .first p {
+  font-size: 14px;
+}
+
+.blog .row .first {
+  text-align: center;
+}
+
+.blog .row .first button {
+  text-transform: uppercase;
+  padding: 12px;
+  border-style: none;
+}
+
+.blog .row .second {
+  background-color: var(--test-color);
+}
+
+.blog .row .second .img-contain img {
+  width: 100%;
+  height: 100%;
+}
+
+.blog .row .second h2 {
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.blog .row .second p {
+  font-size: 19px;
+}
+
+.blog .row .second .boxes .box img {
+  width: 20px;
+  height: 20px;
+  filter: var(--light-filter);
+}
+
+.blog .row .second .boxes .box {
+  gap: 10px;
+}
+
+.blog .row .second .boxes {
+  justify-content: flex-start !important;
+  gap: 20px;
+}
+
+/*travice*/
+.travice {
+  width: 100%;
+  background-color: var(--row-color);
+  padding: 120px 0;
+}
+
+.travice .row .first .logo img {
+  width: 140px;
+  height: 50px;
+}
+
+.travice .row .first p {
+  font-size: 17px;
+}
+
+.travice .row .second,
+.third h3,
+h6,
+h4 {
+  text-transform: capitalize;
+}
+
+.travice .row .third .box-1,
+.box-2,
+.box-3 {
+  justify-content: flex-start !important;
+  gap: 15px;
+}
+
+.travice .row .third .box-1 img {
+  width: 30px;
+  height: 30px;
+  filter: var(--warning-filter);
+}
+
+.travice .row .third .box-2 img {
+  width: 30px;
+  height: 30px;
+  filter: var(--warning-filter);
+}
+
+.travice .row .third .box-3 img {
+  width: 30px;
+  height: 30px;
+  filter: var(--warning-filter);
+}
+
+.travice .row .fourt h3 {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.travice .row .fourt p {
+  font-size: 14px;
+}
+
+.travice .row .fourt form input {
+  width: 100%;
+  padding: 15px 20px;
+  border-style: none;
+}
+
+.travice .row .fourt form button {
+  width: 100%;
+  padding: 15px 20px;
+  border-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.travice .row .fourt h3 {
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+/*footer*/
+footer {
+  width: 100%;
+  background-color: var(--test-color);
+  padding: 30px 0;
+}
+
+footer .container {
+  justify-content: space-between !important;
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */
